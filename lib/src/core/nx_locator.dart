@@ -489,7 +489,6 @@ extension NxLocatorFeatures on NxLocator {
       'NxLocator(instanceName: $instanceName, profiles: ${_profileManager.profiles.length}, active: ${_profileManager.activeProfiles.length})';
 }
 
-
 /// This matches GetIt's exact API where instance can be called with generic parameters
 class NxLocatorCallable {
   final NxLocator _locator;
