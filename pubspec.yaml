@@ -3,12 +3,11 @@ description: >-
   Next Generation Dependency Injection - Advanced service locator with 
   multi-profile support, dynamic dependency management, and profile switching 
   for Flutter applications. Drop-in replacement for get_it with enhanced features.
-version: 0.6.0
-homepage: https://github.com/salah-alhajj/nx-di
-repository: https://github.com/salah-alhajj/nx-di
-issue_tracker: https://github.com/salah-alhajj/nx-di/issues
+version: 0.7.0
+homepage: https://github.com/salah-alhajj/nx_di
+repository: https://github.com/salah-alhajj/nx_di
+issue_tracker: https://github.com/salah-alhajj/nx_di/issues
 documentation: https://pub.dev/documentation/nx_di
-publish_to: https://pub.dev/
 license: MIT
 topics:
   - dependency-injection

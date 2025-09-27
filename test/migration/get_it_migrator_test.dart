@@ -75,7 +75,7 @@ void setup() {
       );
       expect(
         migratedContent,
-        contains('/* TODO: allReady() not available in nx-di.'),
+        contains('/* TODO: allReady() not available in nx_di.'),
       );
     });
 

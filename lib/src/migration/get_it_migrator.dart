@@ -39,7 +39,7 @@ class MigrationConfig {
   /// Whether to use 'nx' or 'di' as the global instance name
   final String globalInstanceName;
 
-  /// Whether to add nx-di import automatically
+  /// Whether to add nx_di import automatically
   final bool addNxDiImport;
 
   /// Whether to remove get_it import after migration
@@ -60,7 +60,7 @@ class MigrationConfig {
   });
 }
 
-/// Automatic migration tool from get_it to nx-di
+/// Automatic migration tool from get_it to nx_di
 class GetItMigrator {
   // singleton
   static final GetItMigrator _instance = GetItMigrator._();
@@ -100,7 +100,7 @@ class GetItMigrator {
 
   /// Run the migration process
   Future<MigrationStats> migrate() async {
-    print('🚀 Starting get_it to nx-di migration...');
+    print('🚀 Starting get_it to nx_di migration...');
     print('Root path: ${config.rootPath}');
     print('Global instance: ${config.globalInstanceName}');
     print('Dry run: ${config.dryRun}');
@@ -242,7 +242,7 @@ class GetItMigrator {
     // 3. Replace method calls
     migratedContent = _replaceMethods(migratedContent);
 
-    // 4. Add nx-di import if needed
+    // 4. Add nx_di import if needed
     if (config.addNxDiImport &&
         (migratedContent.contains('${config.globalInstanceName}.') ||
             migratedContent.contains('NxLocator'))) {
@@ -252,7 +252,7 @@ class GetItMigrator {
     return migratedContent;
   }
 
-  /// Replace get_it imports with nx-di imports
+  /// Replace get_it imports with nx_di imports
   String _replaceImports(String content) {
     final importReplacements = {
       "import 'package:get_it/get_it.dart';":
@@ -322,7 +322,7 @@ class GetItMigrator {
         r'(\w+)\.registerLazySingleton<([^>]+)>\(\s*([^,]+),\s*signalReady:\s*true\s*\)',
       ),
 
-      // allReady() method (not available in nx-di)
+      // allReady() method (not available in nx_di)
       RegExp(r'(\w+)\.allReady\(\)'),
 
       // isReady<T>() method
@@ -365,8 +365,8 @@ class GetItMigrator {
             ')';
       }
     } else if (fullMatch.contains('allReady()')) {
-      // allReady() is not available in nx-di, suggest alternative
-      return '/* TODO: allReady() not available in nx-di. '
+      // allReady() is not available in nx_di, suggest alternative
+      return '/* TODO: allReady() not available in nx_di. '
           'Consider using individual isRegistered<T>() checks */';
     } else if (fullMatch.contains('isReady<')) {
       // isReady<T>() -> isRegistered<T>()
@@ -378,7 +378,7 @@ class GetItMigrator {
     return null;
   }
 
-  /// Add nx-di import to file if not present
+  /// Add nx_di import to file if not present
   String _addNxDiImport(String content) {
     if (content.contains("import 'package:nx_di/nx_di.dart'") ||
         content.contains('import "package:nx_di/nx_di.dart"')) {
@@ -440,6 +440,6 @@ class GetItMigrator {
     print('1. Review the modified files');
     print('2. Run your tests to ensure everything works');
     print('3. Look for any TODO comments for manual fixes needed');
-    print('4. Consider using nx-di profiles for better organization');
+    print('4. Consider using nx_di profiles for better organization');
   }
 }

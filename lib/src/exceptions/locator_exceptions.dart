@@ -1,6 +1,6 @@
 // src/exceptions/locator_exceptions.dart
 
-/// Base exception class for all nx-di related exceptions
+/// Base exception class for all nx_di related exceptions
 abstract class NxDiException implements Exception {
   /// Human-readable error message
   final String message;
@@ -326,7 +326,7 @@ class MigrationException extends NxDiException {
 
 /// Extension methods for better exception handling
 extension NxDiExceptionExtensions on Exception {
-  /// Check if this exception is related to nx-di
+  /// Check if this exception is related to nx_di
   bool get isNxDiException => this is NxDiException;
 
   /// Get the root cause of a nested exception

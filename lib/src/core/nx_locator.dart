@@ -269,7 +269,7 @@ class NxLocator {
     return types;
   }
 
-  // ===== PROFILE MANAGEMENT (nx-di exclusive) =====
+  // ===== PROFILE MANAGEMENT (nx_di exclusive) =====
 
   /// Create and register a new profile
   ///
@@ -423,7 +423,7 @@ class NxLocator {
 }
 
 extension NxLocatorFeatures on NxLocator {
-  // ===== ADVANCED FEATURES (nx-di exclusive) =====
+  // ===== ADVANCED FEATURES (nx_di exclusive) =====
 
   /// Get comprehensive performance statistics
   ///
