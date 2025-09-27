@@ -15,7 +15,7 @@ dependencies:
     sdk: flutter
   
   # remove_this_line: get_it: ^7.x.x 
-  nx_di: ^0.7.4 # add_this_line
+  nx_di: ^0.7.5 # add_this_line
 ```
 
 Then, run `flutter pub get` or `dart pub get` to update your dependencies.

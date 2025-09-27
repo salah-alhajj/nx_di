@@ -498,7 +498,6 @@ class NxLocatorCallable {
   /// Public access to the underlying NxLocator instance
   NxLocator get locator => _locator;
 
-  /// Usage: NxLocator.instance<WithdrawalRepository>()
   T call<T extends Object>({
     String? instanceName,
     dynamic param1,
@@ -514,7 +513,6 @@ class NxLocatorCallable {
   // Property-style access methods (for GetIt.instance.method() compatibility)
 
   /// Register a singleton - property access style
-  /// Usage: NxLocator.instance.registerSingleton<Type>(instance)
   NxLocatorCallable registerSingleton<T extends Object>(
     T instance, {
     String? instanceName,
