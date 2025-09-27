@@ -140,11 +140,7 @@ class Profile {
     }
   }
 
-  // 2025 COMPILE-TIME OPTIMIZATIONS: Static constants for zero-allocation patterns
-  static final RegistrationOptions<Object> _emptyOptions =
-      RegistrationOptions<Object>();
-  static const Map<Type, Set<String>> _emptyInstanceNames =
-      <Type, Set<String>>{};
+
 
   // 2025 CONST LOOKUP: Pre-computed hash tables for maximum compiler optimization
   static const Map<Type, int> _typeHashCache = <Type, int>{
