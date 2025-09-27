@@ -8,6 +8,7 @@ homepage: https://github.com/salah-alhajj/nx-di
 repository: https://github.com/salah-alhajj/nx-di
 issue_tracker: https://github.com/salah-alhajj/nx-di/issues
 documentation: https://pub.dev/documentation/nx_di
+publish_to: https://pub.dev/
 license: MIT
 topics:
   - dependency-injection
