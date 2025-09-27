@@ -140,8 +140,6 @@ class Profile {
     }
   }
 
-
-
   // 2025 CONST LOOKUP: Pre-computed hash tables for maximum compiler optimization
   static const Map<Type, int> _typeHashCache = <Type, int>{
     String: 67452301, // Pre-computed hash for String type
