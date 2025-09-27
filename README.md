@@ -72,7 +72,7 @@ Add NxDI to your project's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  nx_di: ^0.7.5
+  nx_di: ^0.7.6
 ```
 
 Then, run `dart pub get` or `flutter pub get`.

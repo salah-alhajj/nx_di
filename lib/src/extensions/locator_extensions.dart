@@ -5,10 +5,9 @@ import '../core/nx_locator.dart';
 /// Custom extension to provide alternative syntax
 ///
 /// WARNING: This is non-standard and not recommended.
-/// Use nx.get<Type>() instead for standard usage.
+/// ignore_for_file: unused_import, undefined_identifier
 extension NxLocatorExtensions on NxLocator {
   /// Alternative syntax that mimics what you wanted
-  /// Usage: NxLocator.instance.call<BookingRepo>() or NxLocator.instance<BookingRepo>()
   T call<T extends Object>({
     String? instanceName,
     dynamic param1,
@@ -19,7 +18,6 @@ extension NxLocatorExtensions on NxLocator {
 }
 
 /// Function-style locator that enables the syntax you want
-/// Usage: locator<BookingRepo>()
 T locator<T extends Object>({
   String? instanceName,
   dynamic param1,

@@ -43,9 +43,9 @@ export 'src/extensions/locator_extensions.dart';
 ///
 /// Usage:
 /// ```dart
+/// // ignore_for_file: unused_import, undefined_identifier
 /// import 'package:nx_di/nx_di.dart';
 ///
-/// // Use exactly like get_it:
 /// nx.registerSingleton<ApiService>(ApiService());
 /// final api = nx.get<ApiService>();
 /// ```
