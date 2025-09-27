@@ -30,7 +30,6 @@ class NxLocator {
     return _instance ??= NxLocator._internal();
   }
 
-  /// Global instance - callable like GetIt.instance<Type>() or GetIt.instance.method()
   static NxLocatorCallable get instance {
     return _instanceCallable ??= NxLocatorCallable._(_getInstance());
   }
@@ -493,7 +492,7 @@ extension NxLocatorFeatures on NxLocator {
 /// Callable class that enables GetIt.instance<Type>() syntax
 /// This matches GetIt's exact API where instance can be called with generic parameters
 class NxLocatorCallable {
-  NxLocator _locator;
+  final NxLocator _locator;
 
   NxLocatorCallable._(this._locator);
 
