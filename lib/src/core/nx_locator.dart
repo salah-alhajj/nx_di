@@ -489,7 +489,7 @@ extension NxLocatorFeatures on NxLocator {
       'NxLocator(instanceName: $instanceName, profiles: ${_profileManager.profiles.length}, active: ${_profileManager.activeProfiles.length})';
 }
 
-/// Callable class that enables GetIt.instance<Type>() syntax
+
 /// This matches GetIt's exact API where instance can be called with generic parameters
 class NxLocatorCallable {
   final NxLocator _locator;
@@ -499,7 +499,6 @@ class NxLocatorCallable {
   /// Public access to the underlying NxLocator instance
   NxLocator get locator => _locator;
 
-  /// Main callable method that supports generic parameters like GetIt.instance<Type>()
   /// Usage: NxLocator.instance<WithdrawalRepository>()
   T call<T extends Object>({
     String? instanceName,
