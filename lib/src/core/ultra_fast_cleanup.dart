@@ -87,16 +87,3 @@ extension UltraFastProfileCleanup on Profile {
 }
 
 /// Optimized service registration that tracks disposable instances
-class _FastServiceRegistration<T extends Object> {
-  final T? _instance;
-  final bool isDisposable;
-
-  _FastServiceRegistration(this._instance)
-    : isDisposable = _instance is Disposable;
-
-  void dispose() {
-    if (isDisposable && _instance != null) {
-      (_instance as Disposable).dispose();
-    }
-  }
-}

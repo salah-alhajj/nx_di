@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:convert';
 
 class MigrationStats {
   int filesProcessed = 0;
