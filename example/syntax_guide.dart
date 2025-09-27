@@ -1,6 +1,6 @@
 // example/syntax_guide.dart
 
-import '../lib/nx_di.dart';
+import 'package:nx_di/nx_di.dart';
 
 /// Syntax Guide Example
 ///

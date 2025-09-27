@@ -2,8 +2,6 @@
 
 import 'package:test/test.dart';
 import 'package:nx_di/nx_di.dart';
-import 'package:nx_di/src/core/nx_locator.dart';
-import 'package:nx_di/src/extensions/locator_extensions.dart';
 
 class BookingRepo {
   String bookFlight() => 'Flight booked';

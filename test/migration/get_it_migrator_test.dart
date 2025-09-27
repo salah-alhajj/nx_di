@@ -82,7 +82,7 @@ void setup() {
     test('dry run does not modify files', () async {
       final filePath = '${tempDir.path}/dry_run_test.dart';
       final file = File(filePath);
-      final originalContent = '''
+      const originalContent = '''
 import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 ''';

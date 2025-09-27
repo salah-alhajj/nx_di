@@ -36,7 +36,7 @@ class DevApiService implements ApiService {
 
   @override
   Future<String> fetchData() async {
-    await Future.delayed(Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 100));
     return 'Dev data from $baseUrl';
   }
 }
@@ -89,7 +89,7 @@ class ProdApiService implements ApiService {
 
   @override
   Future<String> fetchData() async {
-    await Future.delayed(Duration(milliseconds: 50));
+    await Future.delayed(const Duration(milliseconds: 50));
     return 'Production data from $baseUrl';
   }
 }

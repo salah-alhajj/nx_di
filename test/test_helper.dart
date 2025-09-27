@@ -73,7 +73,7 @@ class AsyncDisposableService implements AsyncDisposable {
     if (!_isDisposed) {
       _isDisposed = true;
       // Simulate async cleanup
-      await Future.delayed(Duration(milliseconds: 10));
+      await Future.delayed(const Duration(milliseconds: 10));
       print('AsyncDisposableService($id) disposed asynchronously');
     }
   }
@@ -82,7 +82,7 @@ class AsyncDisposableService implements AsyncDisposable {
     if (_isDisposed) {
       throw StateError('Service has been disposed');
     }
-    await Future.delayed(Duration(milliseconds: 5));
+    await Future.delayed(const Duration(milliseconds: 5));
   }
 
   @override
@@ -173,13 +173,13 @@ void assertServiceResolvable<T extends Object>(NxLocator locator) {
   expect(
     locator.isRegistered<T>(),
     isTrue,
-    reason: 'Service ${T} should be registered',
+    reason: 'Service $T should be registered',
   );
   final instance = locator.get<T>();
   expect(
     instance,
     isA<T>(),
-    reason: 'Retrieved instance should be of type ${T}',
+    reason: 'Retrieved instance should be of type $T',
   );
 }
 
@@ -188,7 +188,7 @@ void assertServiceNotResolvable<T extends Object>(NxLocator locator) {
   expect(
     locator.isRegistered<T>(),
     isFalse,
-    reason: 'Service ${T} should not be registered',
+    reason: 'Service $T should not be registered',
   );
   expect(() => locator.get<T>(), throwsA(isA<ObjectNotFoundException>()));
 }

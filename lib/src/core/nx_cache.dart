@@ -3,17 +3,17 @@
 import 'dart:collection';
 
 /// Fast service key for reduced overhead
-class _FastServiceKey {
+class FastServiceKey {
   final Type type;
   final String? instanceName;
   final int _hashCode;
 
-  _FastServiceKey(this.type, this.instanceName)
+  FastServiceKey(this.type, this.instanceName)
     : _hashCode = Object.hash(type, instanceName);
 
   @override
   bool operator ==(Object other) =>
-      other is _FastServiceKey &&
+      other is FastServiceKey &&
       type == other.type &&
       instanceName == other.instanceName;
 
@@ -59,14 +59,14 @@ class NxResolutionCache {
   final int maxSize;
 
   /// Cache entries using LinkedHashMap for O(1) LRU
-  final LinkedHashMap<_FastServiceKey, NxCacheEntry> _cache =
-      LinkedHashMap<_FastServiceKey, NxCacheEntry>();
+  final LinkedHashMap<FastServiceKey, NxCacheEntry> _cache =
+      LinkedHashMap<FastServiceKey, NxCacheEntry>();
 
   NxResolutionCache({this.maxSize = 1000});
 
   /// Get cache key for type and instance name
-  _FastServiceKey _getCacheKey<T extends Object>({String? instanceName}) {
-    return _FastServiceKey(T, instanceName);
+  FastServiceKey _getCacheKey<T extends Object>({String? instanceName}) {
+    return FastServiceKey(T, instanceName);
   }
 
   /// Check if an entry exists in cache
@@ -138,7 +138,7 @@ class NxResolutionCache {
   }
 
   /// Get cache entries sorted by access count (for debugging)
-  List<MapEntry<_FastServiceKey, NxCacheEntry>> getMostAccessedEntries([
+  List<MapEntry<FastServiceKey, NxCacheEntry>> getMostAccessedEntries([
     int limit = 10,
   ]) {
     final entries = _cache.entries.toList();

@@ -27,7 +27,7 @@ void main() {
     });
 
     test('failure factory creates a failed result', () {
-      final error = ObjectNotFoundException(
+      const error = ObjectNotFoundException(
         'Type `TestService` is not registered in any active profile.',
         objectType: TestService,
       );
@@ -59,7 +59,7 @@ void main() {
     });
 
     test('toString() returns correct string for failure', () {
-      final error = ObjectNotFoundException(
+      const error = ObjectNotFoundException(
         'Type `TestService` is not registered in any active profile.',
         objectType: TestService,
       );

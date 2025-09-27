@@ -510,7 +510,7 @@ class Profile {
   @override
   String toString() =>
       'Profile(name: $name, active: $isActive, '
-      'services: ${serviceCount}, priority: $priority)';
+      'services: $serviceCount, priority: $priority)';
 
   @override
   bool operator ==(Object other) =>

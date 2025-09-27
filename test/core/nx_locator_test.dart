@@ -1,4 +1,3 @@
-import 'package:test/test.dart';
 import 'package:nx_di/nx_di.dart';
 import '../test_helper.dart';
 

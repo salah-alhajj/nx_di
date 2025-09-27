@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart'
     hide test, group, setUp, tearDown, expect;
 import 'package:nx_di/nx_di.dart';
-import 'package:test/test.dart';
 import '../test_helper.dart';
 
 void main() {

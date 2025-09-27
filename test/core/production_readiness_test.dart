@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:test/test.dart';
 import 'package:nx_di/nx_di.dart';
 import '../test_helper.dart';
 
@@ -96,7 +95,7 @@ void main() {
         int initCounter = 0;
         nx.registerSingletonAsync<ServiceA>(() async {
           initCounter++;
-          await Future.delayed(Duration(milliseconds: 20));
+          await Future.delayed(const Duration(milliseconds: 20));
           return ServiceA();
         });
 
@@ -194,7 +193,7 @@ void main() {
       test(
         'should handle a large number of registrations and lookups efficiently',
         () {
-          final count = 10000;
+          const count = 10000;
           for (int i = 0; i < count; i++) {
             nx.registerFactory<ServiceA>(
               () => ServiceA(),

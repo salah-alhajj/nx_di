@@ -1,6 +1,6 @@
 // example/syntax_error_fixes_demo.dart
 
-import '../lib/nx_di.dart';
+import 'package:nx_di/nx_di.dart';
 
 /// Demonstration of syntax error fixes
 /// This shows the correct way to handle common errors

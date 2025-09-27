@@ -1,6 +1,6 @@
 // example/getit_exact_syntax_demo.dart
 
-import '../lib/nx_di.dart';
+import 'package:nx_di/nx_di.dart';
 
 /// Demonstration of GetIt.instance<Type>() exact syntax compatibility
 ///

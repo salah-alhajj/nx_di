@@ -7,7 +7,7 @@ class AsyncService {
 }
 
 Future<AsyncService> createAsyncService() async {
-  await Future.delayed(Duration(milliseconds: 100));
+  await Future.delayed(const Duration(milliseconds: 100));
   return AsyncService('Async data');
 }
 
