@@ -36,4 +36,4 @@ dev_dependencies:
   coverage: ^1.8.0
 
 executables:
-  nx-migrate: bin/migrate_from_get_it
+  nx-migrate: migrate_from_get_it
