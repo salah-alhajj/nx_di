@@ -176,11 +176,7 @@ void assertServiceResolvable<T extends Object>(NxLocator locator) {
     reason: 'Service $T should be registered',
   );
   final instance = locator.get<T>();
-  expect(
-    instance,
-    isA<T>(),
-    reason: 'Retrieved instance should be of type $T',
-  );
+  expect(instance, isA<T>(), reason: 'Retrieved instance should be of type $T');
 }
 
 /// Assert that a service is not resolvable

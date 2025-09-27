@@ -3,7 +3,7 @@ description: >-
   A high-performance dependency injection library for Dart and Flutter. 
   Features multi-profile support and serves as a drop-in replacement for 
   get_it with enhanced capabilities.
-version: 0.7.3
+version: 0.7.4
 homepage: https://github.com/salah-alhajj/nx_di
 repository: https://github.com/salah-alhajj/nx_di
 issue_tracker: https://github.com/salah-alhajj/nx_di/issues
